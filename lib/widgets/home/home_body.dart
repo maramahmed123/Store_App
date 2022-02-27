@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:store_app/constant.dart';
 import 'package:store_app/models/product.dart';
@@ -30,26 +28,24 @@ class HomeBody extends StatelessWidget {
                     ),
                   ),
                 ),
-              ListView.builder(
-                itemCount: products.length,
-                itemBuilder: (context, index) => ProductCard(
-                  itemIndex: index,
-                  product: products[index],
-
-
-                  press: () {
+                ListView.builder(
+                  itemCount: products.length,
+                  itemBuilder: (context, index) => CardData(
+                    itemIndex: index,
+                    product: products[index],
+                    press: () {
                       // Navigator.push(
                       //   context,
                       //   MaterialPageRoute(
                       //     builder: (context) => DetailsScreen(
                       //       product: products[index],
-                            
+
                       //     ),
                       //   ),
                       // );
                     },
+                  ),
                 ),
-              ),
               ],
             ),
           )
@@ -58,5 +54,3 @@ class HomeBody extends StatelessWidget {
     );
   }
 }
-
-
